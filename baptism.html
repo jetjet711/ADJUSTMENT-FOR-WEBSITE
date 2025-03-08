@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baptism Scheduling</title>
+  <link rel="stylesheet" href="baptism.css">
+</head>
+<body>
+  <div class="baptism-page">
+    <h1>Baptism Services</h1>
+
+    <!-- Tabs for Navigation -->
+    <div class="baptism-tabs">
+      <button class="baptism-tab-button active" data-tab="schedule">Schedule Baptism</button>
+      <button class="baptism-tab-button" data-tab="certificate">Request Certificate</button>
+      <button class="baptism-tab-button" data-tab="status">Check Status</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="baptism-tab-content">
+      <!-- Schedule Baptism Tab -->
+      <div id="schedule" class="baptism-tab-pane active">
+        <form id="baptismScheduleForm">
+          <div class="baptism-form-group">
+            <label for="baptismName">Full Name:</label>
+            <input type="text" id="baptismName" name="baptismName" required>
+          </div>
+          <div class="baptism-form-group">
+            <label for="baptismEmail">Email:</label>
+            <input type="email" id="baptismEmail" name="baptismEmail" required>
+          </div>
+          <div class="baptism-form-group">
+            <label for="baptismDate">Preferred Baptism Date:</label>
+            <input type="date" id="baptismDate" name="baptismDate" required>
+          </div>
+          <button type="submit" class="baptism-submit-button">Schedule Baptism</button>
+        </form>
+      </div>
+
+      <!-- Request Certificate Tab -->
+      <div id="certificate" class="baptism-tab-pane">
+        <form id="baptismCertificateForm">
+          <div class="baptism-form-group">
+            <label for="certificateName">Full Name:</label>
+            <input type="text" id="certificateName" name="certificateName" required>
+          </div>
+          <div class="baptism-form-group">
+            <label for="certificateEmail">Email:</label>
+            <input type="email" id="certificateEmail" name="certificateEmail" required>
+          </div>
+          <button type="submit" class="baptism-submit-button">Request Certificate</button>
+        </form>
+      </div>
+
+      <!-- Check Status Tab -->
+      <div id="status" class="baptism-tab-pane">
+        <form id="baptismStatusForm">
+          <div class="baptism-form-group">
+            <label for="statusEmail">Email:</label>
+            <input type="email" id="statusEmail" name="statusEmail" required>
+          </div>
+          <button type="submit" class="baptism-submit-button">Check Status</button>
+        </form>
+        <p id="baptismStatusMessage" class="baptism-status-message"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="baptism.js"></script>
+</body>
+</html>

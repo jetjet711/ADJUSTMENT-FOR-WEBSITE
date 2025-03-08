@@ -1,0 +1,7 @@
+git checkout --orphan new_branch  # Create a new branch
+git rm -rf .                      # Remove all files
+git commit --allow-empty -m "Fresh start"
+git branch -D main                 # Delete old branch (if needed)
+git branch -m main                 # Rename new branch to main
+git push -f origin main            # Force push changes
+    
